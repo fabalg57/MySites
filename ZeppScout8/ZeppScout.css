@@ -1,0 +1,62 @@
+/* Stile personalizzato per il font Inter */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f7f7f9;
+}
+/* Stile per i pulsanti - Modificato per forma rotonda */
+.log-button {
+    /* Fissa la larghezza e altezza per una forma circolare perfetta */
+    width: 70px;
+    height: 70px; 
+    padding: 0; /* Rimosso il padding per centrare meglio il testo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 768px) {
+     .log-button {
+        width: 90px;
+        height: 90px;
+        font-size: 1.5rem;
+     }
+}
+.log-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+.log-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+/* Stili per le diverse sezioni */
+.color-A { background-color: #3b82f6; color: white; } /* Blu */
+.color-B { background-color: #10b981; color: white; } /* Verde */
+.color-V { background-color: #f59e0b; color: white; } /* Giallo/Ambra */
+.color-P { background-color: #ef4444; color: white; } /* Rosso */
+
+/* --- Stili per la Notifica del Voto --- */
+
+/* Stile base e posizione fissa per la notifica */
+.score-notification {
+    opacity: 1;
+    min-width: 250px;
+    text-align: center;
+    /* Aggiunge la transizione per un effetto fade */
+    transition: opacity 0.3s ease-out;
+}
+
+/* Colori di sfondo per la notifica (basati sulla mappatura COLOR_MAP in ZeppScout.js) */
+.score-notification[style*="3b82f6"] { 
+    background-color: #3b82f6 !important; 
+} /* Blu - per Action A */
+.score-notification[style*="10b981"] { 
+    background-color: #10b981 !important; 
+} /* Verde - per Action B */
+.score-notification[style*="f59e0b"] { 
+    background-color: #f59e0b !important; 
+} /* Giallo/Ambra - per Action V */
+.score-notification[style*="
